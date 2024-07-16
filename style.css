@@ -1,0 +1,175 @@
+/* style.css für
+   Bandbreiten Rechner 2024 (quasi Dreisatz)
+   programmiert von Robin Neff 
+   Version 1.0.5 */
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: navy;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+.screen {
+  display: block; /* Ensure the classes set as screen are visible */
+}
+
+.hidden {
+  display: none; /* Hide hidden screens */
+}
+
+#enter-data-screen {
+  padding: 20px;
+  background: white;
+  margin: 2% auto;
+  width: 80%;
+  max-width: 900px;
+  min-width: 700px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px black;
+}
+
+.darkMode#enter-data-screen {
+  background: black;  
+  color: white;
+}
+
+.darkMode#enter-data-screen select {
+  background: #1F1F1F;  
+  color: white;
+}
+
+.darkMode#enter-data-screen select:hover {
+  border: 1px Aqua solid;
+}
+
+.darkMode#enter-data-screen select:focus {
+  border: 1px pink solid;
+}
+
+.darkMode#enter-data-screen input {
+  background: #1F1F1F;  
+  color: white;
+}
+
+.darkMode#enter-data-screen input:hover {
+  border: 2px Aqua solid;
+}
+
+.darkMode#enter-data-screen input:focus {
+  border: 1px pink solid;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.darkMode#enter-data-screen p {
+  background: black;  
+  color: white;
+}
+
+.darkMode#enter-data-screen button {
+  background: white;  
+  color: navy;
+}
+
+#inputBandwidth, #inputDataAmount, #inputTime {
+  margin-bottom: 10px;
+}
+    
+#enter-data-screen select {
+  max-width: 235px;
+  min-width: 235px;
+  width: 235px !important;
+  margin: 6px 0px 12px 0px;
+  font-size: 1em;
+}
+
+#enter-data-screen input {
+  max-width: 110px;
+  min-width: 110px;
+  width: 110px !important;
+  margin-bottom:8px;
+  font-size: 1em;
+}
+
+#data-inputs {
+  margin-bottom: 0px;
+}
+
+#data-inputs label {
+/* border: 1px pink solid; */
+  display: inline-block;
+  text-align: right;
+} 
+
+#data-inputs label.label-column-1 {
+  max-width: 99px;
+  min-width: 99px;
+  width: 99px !important;
+}
+
+#data-inputs label.label-column-2 {
+  max-width: 150px;
+  min-width: 150px;
+  width: 150px !important;
+  margin-left: 8px;
+}
+
+input:hover {
+  border: 2px Aqua solid;
+}
+
+select:hover {
+  border: 1px Aqua solid;
+}
+
+input:touch {
+  border: 2px Aqua solid;
+}
+
+select:touch {
+  border: 1px Aqua solid;
+}
+
+button {
+  padding: 10px 14px;
+  height: 44px;
+  max-height: 44px;
+  min-height: 44px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: repeat-x url('button_gradient.png') navy center;
+  color: white;
+  font-size: 1.2em; 
+}
+
+button:hover {
+	background: repeat-x url('button_gradient.png') lightgray 50% 45%;
+  color: black;
+}
+
+button:focus {
+  color: black;
+  background-color: white;
+}
+
+p {
+  margin-top: 2em;
+  font-size: 1em;
+  line-height: 2em;
+}
+
+/* darkreader darkmode */
+[data-darkreader-mode="dynamic"] #enter-data-screen button {
+  background: white;  
+  color: navy;
+}
+
+[data-darkreader-mode="dynamic"] #enter-data-screen {
+  background: black;  
+  color: navy;
+}

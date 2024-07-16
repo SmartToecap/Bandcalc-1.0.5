@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- index.html für -->
+<!-- Bandbreiten Rechner 2024 (quasi Dreisatz) -->
+<!-- programmiert von Robin Neff  -->
+<!-- Version 1.0.5  -->
+<html lang='de'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Bandbreiten Rechner 2024</title>
+    <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+    <div id='enter-data-screen' class='screen'>
+        <h1>Bandbreiten Rechner 2024</h1>
+        <div id='data-inputs'>
+            <label 
+              id='label-bandwidth' 
+              class='label-column-1' 
+              for='inputBandwidth'>
+                Bandbreite:
+            </label>
+            <input 
+              aria-live='assertive'
+              type='number' 
+              id='inputBandwidth' 
+              placeholder='Bandbreite'
+            >
+            <label 
+              id='label-bandwidthUnit' 
+              class='label-column-2' 
+              for='selectBandwidthUnit'>
+                Einheit Bandbreite:
+            </label>
+            <select 
+              id='selectBandwidthUnit'>
+                <option value='bitps'>
+                  Bit/s (Bit pro Sekunde)
+                </option>
+                <option value='kbitps' selected>
+                  kbit/s (kilobit pro Sekunde)
+                </option>
+                <option value='mbitps'>
+                  MBit/s (Megabit pro Sekunde)
+                </option>
+                <option value='gbitps'>
+                  GBit/s (Gigabit pro Sekunde)
+                </option>
+            </select>
+            <br>
+            <label 
+              id='label-dataAmount' 
+              class='label-column-1' 
+              for='inputDataAmount'>
+                Datenmenge:
+            </label>
+            <input 
+              aria-live='assertive'
+              type='number' 
+              id='inputDataAmount' 
+              placeholder='Datenmenge'
+            >
+            <label 
+              id='label-dataAmountUnit' 
+              class='label-column-2' 
+              for='selectDataAmountUnit'>
+                Einheit Datenmenge:
+            </label>
+            <select 
+              id='selectDataAmountUnit'>
+                <option value='byte'>Byte</option>
+                <option value='kilobyte'>KB (Kilobyte)</option>
+                <option value='megabyte' selected>MB (Megabyte)</option>
+                <option value='gigabyte'>GB (Gigabyte)</option>
+                <option value='terabyte'>TB (Terabyte)</option>
+            </select>
+            <br>
+            <label 
+              id='label-time'
+              class='label-column-1' 
+              for='inputTime'>
+                Zeitraum:
+            </label>
+            <input 
+              aria-live='assertive'
+              type='number' 
+              id='inputTime' 
+              placeholder='Zeitraum'
+            >
+            <label 
+              id='label-timeUnit'
+              class='label-column-2' 
+              for='selectTimeUnit'>
+              Einheit Zeitraum:
+            </label>
+            <select 
+              id='selectTimeUnit'>
+                <option value='msecs'>Millisekunden</option>
+                <option value='secs'>Sekunden</option>
+                <option value='mins' selected>Minuten</option>
+                <option value='hrs'>Stunden</option>
+                <option value='days'>Tage</option>
+                <option value='weeks'>Wochen (á 7 Tage)</option>
+                <option value='months'>Monate (á 30 Tage)</option>
+                <option value='years'>Jahre (á 365 Tage)</option>
+            </select>
+        </div>
+        <button onclick='submitData()' id='button-submit-data'>
+          Ergebnis berechnen
+        </button>
+        <button onclick='resetData()' id='button-reset-data'>
+          Formular zur&#252;cksetzen
+        </button>
+        <button onclick='showInstructions()' id='button-show-instructions'>
+          Anleitung 
+        </button>
+        <button onclick='darkMode()' id='button-dark-mode'>
+          Dunkelmodus
+        </button>             
+        <p id='instructions' class='screen hidden'>
+          Bitte zwei von drei Werten angeben und 'Ergebnis berechnen' klicken.
+          <br>Der dritte Wert wird dann automatisch errechnet.
+          <br>Hierzu muss jedoch eines der drei Felder leer bleiben oder als 0 
+          definiert werden.
+          <br>Falls danach kein Wert gel&#246;scht oder als 0 gesetzt wird, 
+          wird beim n&#228;chsten Klick der Wert neu berechnet, der zuletzt 
+          berechnet wurde.
+          <br>Browser-Konsole &#246;ffnen f&#252;r detaillierte Informationen 
+          (Englisch).
+        </p>
+    </div>
+    <script src='script.js'></script>
+</body>
+</html>
